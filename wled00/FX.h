@@ -85,13 +85,13 @@ extern byte realtimeMode;           // used in getMappedPixelIndex()
   /* How much data bytes all segments combined may allocate */
   #define MAX_SEGMENT_DATA  (6*1024) // 6k by default
 #elif defined(CONFIG_IDF_TARGET_ESP32S2)
-  #define MAX_NUM_SEGMENTS  42
+  #define MAX_NUM_SEGMENTS  64
   #define MAX_SEGMENT_DATA  (20*1024) // 20k by default (S2 is short on free RAM), limit does not apply if PSRAM is available
 #else
   #ifdef BOARD_HAS_PSRAM
     #define MAX_NUM_SEGMENTS  64
   #else
-    #define MAX_NUM_SEGMENTS  42
+    #define MAX_NUM_SEGMENTS  64
   #endif
   #define MAX_SEGMENT_DATA  (64*1024) // 64k by default, limit does not apply if PSRAM is available
 #endif
