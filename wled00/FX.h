@@ -1056,3 +1056,4 @@ extern const char JSON_mode_names[];
 extern const char JSON_palette_names[];
 
 #endif
+
